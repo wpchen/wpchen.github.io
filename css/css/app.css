@@ -1,0 +1,181 @@
+/**
+ * div.app
+ *  |_ library
+ *      |_ fileSelector
+ *      |_ fileList
+ *  |_ player
+ *      |_ leftColumnWrapper
+ *         |_ bookmarks
+ *         |_ Tips & Tricks
+ *      |_ videoWrapper
+ *         |_ video
+ *         |_ timer
+ */
+
+div.app {
+	margin-right: 10px; /* scroll bar */
+}
+
+.hidePlayer .player,
+.hideLibrary .library {
+  display: none;
+}
+
+/* library layout */
+.library {
+	margin: 10px;
+}
+
+.fileSelector {
+	width: 85px;
+}
+
+.fileList {
+	margin: 5px 0 0 140px;
+}
+.fileListItem {
+	margin-bottom: 2px;
+}
+.fileList .fileSize {
+	padding-left: 5px;
+	font-size: 13px;
+	color: #aaa;
+}
+
+/* player layout */
+.player {
+	display: flex;
+	flex-direction: row;
+}
+.player .leftColumnWrapper {
+	order: 1;
+	flex-basis: 300px;
+	flex-shrink: 0;
+	flex-grow: 0;
+    overflow: scroll;
+    height: 520px; /* hack */
+}
+
+textarea.mousetrap {
+  width: 95%; /* hacky */
+  font-family: monospace;
+}
+
+/*::-webkit-scrollbar {display:none;}*/
+
+.player .videoWrapper {
+	order: 2;
+	flex-grow: 1;
+	flex-shrink: 1;
+	position: relative; /* for timer positioning */
+}
+
+/* library */
+.library div.step {
+	font: 23px verdana;
+}
+
+.library div.step:not(:first-child) {
+	margin-top: 15px;
+}
+
+/* player > video, timer */
+.player .video {
+	width: 100%;
+	border: 1px solid gray;
+	padding: 2px;
+}
+.player .timer {
+	text-align: center;
+	padding: 0px 2px;
+}
+
+/* set up timer positioning */
+.player .video {
+	z-index: 0;
+}
+.player .timer {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 1;
+	background-color: white;
+}
+
+/* player > bookmarks */
+.player ul.bookmarks {
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px;
+}
+.timestring {
+	font-family: monospace;
+	white-space: pre;
+}
+.bookmarks li.current {
+	background-color: yellow;
+}
+.bookmarks .event {
+	font-family: verdana;
+	color: gray;
+	font-size: 10px;
+	margin-left: 10px;
+	padding-right: 5px;
+}
+
+.tipsTricks {
+	font-size: 13px;
+	margin: 0 5px;
+}
+a.tipsTricks::before {
+	content: '?';
+	color: gray;
+	border-radius: 8px;
+	padding: 0 4px;
+	margin-right: 4px;
+	border: solid 1px gray;
+}
+
+/* copied from jsfiddle */
+#hotkeyDialog .hotkeyRow {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	padding: 10px 0px;
+}
+#hotkeyDialog .leftCol {
+	order: 1;
+	text-align: right;
+	margin-right: 15px;
+	flex-basis: 125px;
+}
+#hotkeyDialog .rightCol {
+	order: 2;
+	flex-basis: 160px;
+}
+#hotkeyDialog kbd {
+	font: 18px monospace;
+	margin-left: 10px;
+	border: solid 1px #ababab;
+	padding: 3px 5px;
+	border-radius: 5px;
+	color: #999;
+}
+#hotkeyDialog span {
+	font-size: 12px;
+}
+
+/* global stuff */
+.ui-dialog {
+  opacity: 0.95;
+}
+a {
+	text-decoration: none;
+	color: #4679BD;
+}
+a:visited {
+	color: #4679BD;
+}
+a:hover {
+	text-decoration: underline;
+}
