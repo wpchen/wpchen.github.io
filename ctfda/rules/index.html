@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <style>
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+      html {
+        -webkit-text-size-adjust: 100%;
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        display: block;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+      pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      a {
+        background-color: transparent;
+      }
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      img {
+        border-style: none;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      input {
+        overflow: visible;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      [type='button'],
+      [type='reset'],
+      [type='submit'],
+      button {
+        -webkit-appearance: button;
+      }
+      [type='button']::-moz-focus-inner,
+      [type='reset']::-moz-focus-inner,
+      [type='submit']::-moz-focus-inner,
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      [type='button']:-moz-focusring,
+      [type='reset']:-moz-focusring,
+      [type='submit']:-moz-focusring,
+      button:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      fieldset {
+        padding: 0.35em 0.75em 0.625em;
+      }
+      legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      textarea {
+        overflow: auto;
+      }
+      [type='checkbox'],
+      [type='radio'] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      [type='number']::-webkit-inner-spin-button,
+      [type='number']::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type='search'] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      [type='search']::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      details {
+        display: block;
+      }
+      summary {
+        display: list-item;
+      }
+      [hidden],
+      template {
+        display: none;
+      }
+      html {
+        background-color: #fff0f5;
+        box-sizing: border-box;
+      }
+      *,
+      :after,
+      :before {
+        box-sizing: inherit;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        color: #333;
+        font-family: Times New Roman;
+        line-height: 1.5;
+        margin: 1em;
+      }
+      h1 {
+        font-size: 32px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 25px;
+        margin-top: 1.2em;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:visited {
+        color: #00f;
+      }
+      section.toc {
+        padding-left: 2em;
+      }
+      section.toc li {
+        list-style-position: outside;
+        padding-left: 0.5ch;
+      }
+      section.toc li:first-of-type,
+      section.toc li:nth-of-type(22),
+      section.toc li:nth-of-type(23) {
+        list-style-type: none;
+      }
+      section.intro p {
+        margin: 1em;
+        text-indent: 2em;
+      }
+      section.rules .line {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 0.7em;
+      }
+      section.rules .num {
+        color: #000;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 0.5em;
+        text-align: right;
+      }
+      section.rules .text {
+        color: #333;
+      }
+      section.rules .line[data-depth='2'] .num {
+        flex-basis: 4.5ch;
+        margin-left: 0;
+      }
+      section.rules .line[data-depth='3'] .num {
+        flex-basis: 6ch;
+        margin-left: 5.5ch;
+      }
+      section.rules .line[data-depth='4'] .num {
+        flex-basis: 7.5ch;
+        margin-left: 12.5ch;
+      }
+      section.rules .line[data-depth='5'] .num {
+        flex-basis: 8.5ch;
+        margin-left: 21ch;
+      }
+      section.rules .imgHolder {
+        justify-content: center;
+      }
+      section.rules .imgHolder img {
+        border: 1px solid #ccc;
+        width: 80%;
+      }
+      section.definitions .entry {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 0.7em;
+      }
+      section.definitions .entry .term {
+        flex-basis: 7em;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 1em;
+        text-align: right;
+      }
+      section.license > :not(h2) {
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-top: 0.7em;
+      }
+      section.license li {
+        list-style-position: inside;
+        padding-left: 1em;
+      }
+    </style>
+    <meta name="generator" content="Gatsby 4.1.4" />
+    <title data-react-helmet="true">飛盤爭奪賽2021-2024中文版v1</title>
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      href="favicon.ico"
+    />
+    <meta data-react-helmet="true" name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    <div id="___gatsby">
+      <div style="outline: none" tabindex="-1" id="gatsby-focus-wrapper">
+        <main>
+          <h1>WFDF 飛盤爭奪賽規則 2021-2024<br />中文版 v1</h1>
+          <section class="toc">
+            <ol start="0">
+              <li class="section"><a href="#簡介">簡介</a></li>
+              <li class="section"><a href="#1">賽事精神</a></li>
+              <li class="section"><a href="#2">比賽場地</a></li>
+              <li class="section"><a href="#3">裝備</a></li>
+              <li class="section"><a href="#4">分數、得分和賽事</a></li>
+              <li class="section"><a href="#5">隊伍</a></li>
+              <li class="section"><a href="#6">賽事開始</a></li>
+              <li class="section"><a href="#7">發盤</a></li>
+              <li class="section"><a href="#8">比賽的狀態</a></li>
+              <li class="section"><a href="#9">讀秒計數</a></li>
+              <li class="section"><a href="#10">確認</a></li>
+              <li class="section"><a href="#11">出界</a></li>
+              <li class="section"><a href="#12">接盤和定位</a></li>
+              <li class="section"><a href="#13">盤權轉換</a></li>
+              <li class="section"><a href="#14">得分</a></li>
+              <li class="section"><a href="#15">宣告犯規、違規及違例</a></li>
+              <li class="section"><a href="#16">犯規或違例後繼續比賽</a></li>
+              <li class="section"><a href="#17">犯規</a></li>
+              <li class="section"><a href="#18">違規及違例</a></li>
+              <li class="section"><a href="#19">維護安全的比賽中止</a></li>
+              <li class="section"><a href="#20">暫停</a></li>
+              <li class="section"><a href="#定義">定義</a></li>
+              <li class="section"><a href="#合法執照">合法執照</a></li>
+            </ol>
+          </section>
+          <section class="intro">
+            <h2 id="簡介">簡介</h2>
+            <p>
+              飛盤爭奪賽是個一隊7人上場使用飛盤進行比賽的團隊運動。它在一個長方形的場地上進行，大約是足球場寬度的一半，每端都有一個得分區。每支隊伍的目標是讓一位選手在進攻的得分區接獲傳盤然後得分；控盤者不得攜帶飛盤一起行進，但可以向任何方向傳飛盤給任何隊友，任何時候傳盤未完成，則發生盤權轉換，另一隊伍則擁有控盤權，並試圖在對方得分區得分。比賽通常打到15分或進行大約100分鐘；飛盤爭奪賽是自我主導並且沒有身體接觸的。「賽事精神」指導球員如何主導賽事和指導選手在比賽場上的行為。
+            </p>
+            <p>
+              這些規則中許多在本質上都是通用的，並且涵蓋了大多數情況；但是某些規則說明了特定情況，並凌駕於一般情況。
+            </p>
+            <p>
+              基本結構和規則的變化可用於適應特殊的比賽、選手人數、選手年齡或可用空間。有關適用於特定類型世界飛盤總會
+              (WFDF) 賽事的其他規則，請參閱相關附錄。
+            </p>
+          </section>
+          <section class="rules">
+            <h2 id="1">1 賽事精神</h2>
+            <div class="line" data-depth="2">
+              <div id="1.1" class="num">1.1</div>
+              <div class="text">
+                飛盤爭奪賽是一種非身體接觸的、自我主導的運動。所有選手都有責任管理和遵守規則。飛盤爭奪賽依賴「賽事精神」，把公平比賽的責任賦予給每位選手。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.2" class="num">1.2</div>
+              <div class="text">
+                選手彼此間相互信任，沒有任何選手會故意違反規則。因此，對於無意的違規行為並沒有嚴厲的處罰，而是採用模擬如果沒有違規行為，最有可能發生的情況來繼續進行比賽。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.2.1" class="num">1.2.1</div>
+              <div class="text">
+                如果有故意或嚴重違反規則或「賽事精神」，隊長們應該討論這個問題、並決定出適當的結果，即使結果不符合本規則中的任何條例。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.3" class="num">1.3</div>
+              <div class="text">
+                選手應注意他（她）們在團隊之間的任何仲裁中均擔任裁判的角色。選手必須：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.1" class="num">1.3.1</div>
+              <div class="text">了解規則；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.2" class="num">1.3.2</div>
+              <div class="text">公正和客觀；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.3" class="num">1.3.3</div>
+              <div class="text">誠實；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.4" class="num">1.3.4</div>
+              <div class="text">清楚並簡短地解釋觀點；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.5" class="num">1.3.5</div>
+              <div class="text">給予對手合理的發言機會；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.6" class="num">1.3.6</div>
+              <div class="text">考慮對手的觀點；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.7" class="num">1.3.7</div>
+              <div class="text">
+                使用尊重的話語和肢體語言並考慮到潛在的文化差異；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.8" class="num">1.3.8</div>
+              <div class="text">盡可能快速地解決爭議；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.9" class="num">1.3.9</div>
+              <div class="text">在賽事中均以一致的態度發出宣告；以及</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.3.10" class="num">1.3.10</div>
+              <div class="text">
+                僅在違規行為嚴重到足以對結果產生影響的情況下發出宣告。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.4" class="num">1.4</div>
+              <div class="text">
+                鼓勵高度競爭性的比賽，但絕不應該犧牲選手之間的相互尊重、選手遵守且公認的遊戲規則、選手安全或基本的比賽樂趣。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.5" class="num">1.5</div>
+              <div class="text">以下是良好「運動精神」的範例：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.5.1" class="num">1.5.1</div>
+              <div class="text">當您不再認為宣告是正確的時候，收回宣告；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.5.2" class="num">1.5.2</div>
+              <div class="text">有爭議的相互影響後在場邊與對手示意；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.5.3" class="num">1.5.3</div>
+              <div class="text">稱讚對手良好的發揮或有「運動精神」；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.5.4" class="num">1.5.4</div>
+              <div class="text">向對手介紹自己；以及</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.5.5" class="num">1.5.5</div>
+              <div class="text">對異議或挑釁冷靜地作出反應。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.6" class="num">1.6</div>
+              <div class="text">下列行為明顯違反了「賽事精神」，必須避免：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.6.1" class="num">1.6.1</div>
+              <div class="text">危險的動作和侵略行為；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.6.2" class="num">1.6.2</div>
+              <div class="text">故意犯規或者其他故意違法的行為；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.6.3" class="num">1.6.3</div>
+              <div class="text">嘲弄或恐嚇對方選手；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.6.4" class="num">1.6.4</div>
+              <div class="text">得分後無禮的慶祝；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.6.5" class="num">1.6.5</div>
+              <div class="text">發出宣告以報復對手的宣告；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.6.6" class="num">1.6.6</div>
+              <div class="text">欺騙對手將飛盤傳給己隊；以及</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.6.7" class="num">1.6.7</div>
+              <div class="text">其他為了取勝不惜一切代價的行為。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.7" class="num">1.7</div>
+              <div class="text">隊伍是「賽事精神」的守護者，必須：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.7.1" class="num">1.7.1</div>
+              <div class="text">負責教導選手規則和良好的「運動精神」；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.7.2" class="num">1.7.2</div>
+              <div class="text">懲戒表現出不良「運動精神」的隊友；以及</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.7.3" class="num">1.7.3</div>
+              <div class="text">
+                向其他團隊提供建設性回饋，有關他（她）們做得好的方面和/或如何提高他（她）們對「賽事精神」的奉行；以及
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.7.4" class="num">1.7.4</div>
+              <div class="text">
+                宣告運動精神中止比賽，妥善的表達並解決「運動精神」的議題。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.8" class="num">1.8</div>
+              <div class="text">
+                如果新手選手在不瞭解的情況下違反規則，有經驗的選手應該協助解釋違規行為。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.9" class="num">1.9</div>
+              <div class="text">
+                經驗豐富的選手可以提供有關規則和現場仲裁的建議指南，以督促及指導初學者或年輕選手。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.10" class="num">1.10</div>
+              <div class="text">
+                宣告的討論應該由當事選手，以及由對比賽有最佳視角的選手進行。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.10.1" class="num">1.10.1</div>
+              <div class="text">
+                如果沒有直接相關的選手認為隊友做出了錯誤的宣告，或者造成了犯規或違例，他（她）應該告知自己的隊友。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.10.2" class="num">1.10.2</div>
+              <div class="text">
+                除隊長外，其他非選手應避免主動參與；但是選手可以尋求其他人的觀點來澄清規則，並且經由協助以做出適當的宣告。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.11" class="num">1.11</div>
+              <div class="text">選手和隊長全權負責進行並解決所有的宣告。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="1.12" class="num">1.12</div>
+              <div class="text">
+                經過討論後如果雙方無法達成協議，或者不清楚和明顯：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.12.1" class="num">1.12.1</div>
+              <div class="text">在比賽進行中發生了什麼，或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="1.12.2" class="num">1.12.2</div>
+              <div class="text">
+                在比賽進行中最有可能發生的事情，則必須將飛盤返回到最後一個無爭議的控盤者。
+              </div>
+            </div>
+            <h2 id="2">2 比賽場地</h2>
+            <div class="line" data-depth="2">
+              <div id="2.1" class="num">2.1</div>
+              <div class="text">
+                比賽場地是一個長方形區域，具有如圖 1
+                所示的尺寸和區域，基本上應該是平坦的，沒有障礙物，並提供合理的安全性給所有選手。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="2.2" class="num">2.2</div>
+              <div class="text">
+                周圍邊線環繞著比賽場地，由沿長邊的兩（2）條邊線和沿寬邊的兩（2）條端線組成。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="2.3" class="num">2.3</div>
+              <div class="text">周圍邊線不屬於比賽場地的一部分。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="2.4" class="num">2.4</div>
+              <div class="text">
+                得分線是分隔爭奪區和得分區的線，屬於爭奪區的一部分。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="2.5" class="num">2.5</div>
+              <div class="text">
+                Brick標記是爭奪區中兩（2）條一（1）米線交叉的交點，其距離等於得分區長度從得分線起算，位於兩邊邊線間的中間。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="2.6" class="num">2.6</div>
+              <div class="text">
+                八個色彩鮮艷、柔軟的物體（如塑膠錐體）標記了爭奪區和得分區的角落。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="2.7" class="num">2.7</div>
+              <div class="text">
+                比賽場地的周圍環境應避免任何可移動的物體；如果比賽在三（3）米範圍的警戒線內被非場上選手或物體阻礙，任何受阻礙的選手或控盤者均可以宣告【Violation】。
+              </div>
+            </div>
+            <div class="line imgHolder"><img src="field.png" alt="圖一" /></div>
+            <h2 id="3">3 裝備</h2>
+            <div class="line" data-depth="2">
+              <div id="3.1" class="num">3.1</div>
+              <div class="text">使用雙方隊長都能接受的任何飛盤。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="3.2" class="num">3.2</div>
+              <div class="text">WFDF可以認定一份推薦的飛盤清單以供使用。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="3.3" class="num">3.3</div>
+              <div class="text">每位選手必須穿著可以區分彼此隊伍的服裝。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="3.4" class="num">3.4</div>
+              <div class="text">
+                任何選手不得穿著可能會傷害自身或其他選手或阻礙對手比賽的衣服或裝備。
+              </div>
+            </div>
+            <h2 id="4">4 分數、得分和賽事</h2>
+            <div class="line" data-depth="2">
+              <div id="4.1" class="num">4.1</div>
+              <div class="text">
+                賽事由多個分數組成，每個分數都以得分作為結尾。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="4.2" class="num">4.2</div>
+              <div class="text">
+                先得到十五（15）分的隊伍贏得賽事且賽事結束。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="4.3" class="num">4.3</div>
+              <div class="text">
+                賽事分為兩（2）個階段，稱為半場；當一個隊伍首先得到八（8）分時，就是達到半場。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="4.4" class="num">4.4</div>
+              <div class="text">上下半場第一分的開始是該半場開始的時候。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="4.5" class="num">4.5</div>
+              <div class="text">得分後，如果賽事尚未結束或未達到半場：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="4.5.1" class="num">4.5.1</div>
+              <div class="text">下一分立即開始；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="4.5.2" class="num">4.5.2</div>
+              <div class="text">隊伍交換他（她）們防守的得分區；以及</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="4.5.3" class="num">4.5.3</div>
+              <div class="text">
+                得分的隊伍轉換成為防守並且發下一盤，另一隊則為進攻。
+              </div>
+            </div>
+            <h2 id="5">5 隊伍</h2>
+            <div class="line" data-depth="2">
+              <div id="5.1" class="num">5.1</div>
+              <div class="text">
+                每支隊伍最多可派七（7）位選手上場，而場上最少要有五（5）位選手上場。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="5.2" class="num">5.2</div>
+              <div class="text">
+                每支隊伍必須指定一位隊長和一位精神隊長代表隊伍。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="5.3" class="num">5.3</div>
+              <div class="text">
+                隊伍在得分後以及本身隊伍示意發盤之前，可以進行無限制的選手更換。
+              </div>
+            </div>
+            <h2 id="6">6 賽事開始</h2>
+            <div class="line" data-depth="2">
+              <div id="6.1" class="num">6.1</div>
+              <div class="text">兩支隊伍的代表公平決定哪支隊伍要首先選擇：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="6.1.1" class="num">6.1.1</div>
+              <div class="text">一開始要接發盤還是發盤；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="6.1.2" class="num">6.1.2</div>
+              <div class="text">一開始要防守的得分區。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="6.2" class="num">6.2</div>
+              <div class="text">另一個隊伍可以選擇剩餘選項。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="6.3" class="num">6.3</div>
+              <div class="text">在下半場開始時，這些初始選項互換。</div>
+            </div>
+            <h2 id="7">7 發盤</h2>
+            <div class="line" data-depth="2">
+              <div id="7.1" class="num">7.1</div>
+              <div class="text">
+                賽事開始時，半場後或得分之後，比賽起始由防守隊的投擲，稱為“發盤Pull”。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="7.1.1" class="num">7.1.1</div>
+              <div class="text">隊伍必須為發盤做好準備，不得有無理的拖延。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.2" class="num">7.2</div>
+              <div class="text">
+                只有在兩支隊伍透過發盤員以及任一進攻者將一隻手舉過頭頂來表示他（她）們已經準備就緒，才能進行發盤。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.3" class="num">7.3</div>
+              <div class="text">
+                在發出準備就緒信號後，所有進攻者都必須一腳站在防守的得分區線上，並且不得改變彼此的位置，直到發盤出手。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.4" class="num">7.4</div>
+              <div class="text">
+                在發出準備就緒信號後，所有防守者都必須完全將雙腳維持在得分線的垂直平面後方，直到發盤出手。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.5" class="num">7.5</div>
+              <div class="text">
+                如果隊伍違反<!-- -->規則<a class="ruleNum" href="#7.3">7.3</a
+                >或<!-- -->規則<a class="ruleNum" href="#7.4">7.4</a
+                >，則對方隊伍可以宣告“越位【Offside】”違例。此宣告必須在進攻隊伍接觸飛盤之前提出（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#7.8"
+                  >7.8</a
+                >依然適用）。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="7.5.1" class="num">7.5.1</div>
+              <div class="text">
+                如果防守隊選擇宣告【Offside】，控盤者必須根據<!-- -->規則<a
+                  class="ruleNum"
+                  href="#7.9"
+                  >7.9</a
+                >、<!-- -->規則<a class="ruleNum" href="#7.10">7.10</a
+                >、<!-- -->規則<a class="ruleNum" href="#7.11">7.11</a
+                >或<!-- -->規則<a class="ruleNum" href="#7.12">7.12</a
+                >建立軸心點，如同在同一位置叫了暫停，並且儘快重新開始比賽。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="7.5.2" class="num">7.5.2</div>
+              <div class="text">
+                如果進攻隊選擇宣告越位，必須讓飛盤依照本來該有的情況下落地，如同宣告【Brick】（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#7.12"
+                  >7.12</a
+                >）一樣恢復比賽（不需確認）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.6" class="num">7.6</div>
+              <div class="text">
+                發盤時，飛盤一旦出手後，所有選手都可以朝任何方向移動。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.7" class="num">7.7</div>
+              <div class="text">
+                防守者在發盤出手後均不得碰觸飛盤，直到進攻者接觸飛盤或飛盤撞擊地面為止。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.8" class="num">7.8</div>
+              <div class="text">
+                如果進攻者（無論是界內還是在界外）在飛盤落地之前就碰觸到了飛盤，並且進攻隊後續未能建立控盤權，那就是盤權轉換（“接發盤掉盤Dropped
+                pull”）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.9" class="num">7.9</div>
+              <div class="text">
+                如果進攻者接發盤後並建立控盤權，他（她）必須在比賽場地內離建立控盤權最接近的位置建立軸心點，即使該點位於他（她）所防守的得分區。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.10" class="num">7.10</div>
+              <div class="text">
+                如果飛盤落地時接觸到比賽場地，並且都沒有出界，則控盤者必須在飛盤停止的位置建立軸心點，即使該點位於他（她）所防守的得分區。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.11" class="num">7.11</div>
+              <div class="text">
+                如果飛盤落地時接觸到比賽場地，然後在未接觸到進攻者的情況下形成界外，則控盤者必須在最初越過邊線的點上建立軸心點；如果該點位於自己防守的得分區，則必須在最接近爭奪區的得分線位置建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="7.11.1" class="num">7.11.1</div>
+              <div class="text">
+                如果飛盤在形成界外之前與進攻隊選手接觸，則控盤者必須在飛盤最初越過邊線的點上建立軸心點，即使該點位於其所防守的得分區。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="7.12" class="num">7.12</div>
+              <div class="text">
+                如果飛盤在沒有接觸到比賽場地或進攻隊選手的情況下形成出界，進攻隊可以選擇最接近其防守得分區的Brick標記或選擇爭奪區內距離飛盤出界點最近的位置（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#11.8"
+                  >11.8</a
+                >）後，由控盤者建立軸心點；如果進攻隊選擇Brick標記，在拿起飛盤之前必須發出信號，由任何一位進攻隊選手伸直一隻手臂高舉過頭，並且宣告【Brick】，宣告【Brick】之後不可以改變選擇。
+              </div>
+            </div>
+            <h2 id="8">8 比賽的狀態</h2>
+            <div class="line" data-depth="2">
+              <div id="8.1" class="num">8.1</div>
+              <div class="text">
+                比賽出現下列狀態時為死盤，不可能發生盤權轉換：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.1.1" class="num">8.1.1</div>
+              <div class="text">每次得分後，直到發盤出手；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.1.2" class="num">8.1.2</div>
+              <div class="text">
+                發盤後或發生盤權轉換後，當飛盤必須攜帶到軸心點的位置時，直到建立軸心點前；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.1.3" class="num">8.1.3</div>
+              <div class="text">
+                任何比賽中止或使比賽停止的宣告之後，直到飛盤被確認；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.1.4" class="num">8.1.4</div>
+              <div class="text">在飛盤落地後，直到適當的隊伍建立控盤權。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.1.5" class="num">8.1.5</div>
+              <div class="text">選手可以在死盤期間移動（除非另有規定）。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="8.2" class="num">8.2</div>
+              <div class="text">比賽沒有形成死盤時則是活盤。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="8.3" class="num">8.3</div>
+              <div class="text">
+                在死盤期間，控盤者不得將控盤權轉交給其他選手。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="8.4" class="num">8.4</div>
+              <div class="text">
+                飛盤落地後，任何選手都可以試圖阻止其滾動或滑動。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.4.1" class="num">8.4.1</div>
+              <div class="text">
+                如果在試圖停止上述狀態的飛盤時，選手大幅度更改了飛盤的位置，則對方可以要求在其與飛盤接觸的位置建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="8.5" class="num">8.5</div>
+              <div class="text">
+                在飛盤轉換和發盤之後，進攻者必須以步行速度或更快的速度向飛盤移動，直接取得飛盤並建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.5.1" class="num">8.5.1</div>
+              <div class="text">
+                除<!-- -->規則<a class="ruleNum" href="#8.5">8.5</a
+                >外，在盤權轉換後，則控盤者必須在以下時限內建立軸心點，如果飛盤並未出界，且飛盤位置為：
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="8.5.1.1" class="num">8.5.1.1</div>
+              <div class="text">在爭奪區－在飛盤停止的十（10）秒內。</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="8.5.1.2" class="num">8.5.1.2</div>
+              <div class="text">在得分區－在飛盤停止的二十（20）秒內。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="8.5.2" class="num">8.5.2</div>
+              <div class="text">
+                如果進攻隊違反<!-- -->規則<a class="ruleNum" href="#8.5">8.5</a
+                >或<!-- -->規則<a class="ruleNum" href="#8.5.1">8.5.1</a
+                >，防守隊可以發出警告（“延誤賽事【Delay of
+                Game】”或開始倒數），或宣告【Violation】。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="8.5.2.1" class="num">8.5.2.1</div>
+              <div class="text">
+                如果在警告之後進攻隊持續違反<!-- -->規則<a
+                  class="ruleNum"
+                  href="#8.5"
+                  >8.5</a
+                >或<!-- -->規則<a class="ruleNum" href="#8.5.1">8.5.1</a
+                >，則不適用<!-- -->規則<a class="ruleNum" href="#9.3.1">9.3.1</a
+                >，且守盤員可以開始讀秒。
+              </div>
+            </div>
+            <h2 id="9">9 讀秒計數</h2>
+            <div class="line" data-depth="2">
+              <div id="9.1" class="num">9.1</div>
+              <div class="text">
+                守盤員通過宣告【Stalling】，然後從1到10對控盤者進行讀秒計數；讀秒計數中每個秒數之間停頓間隔必須至少為一（1）秒。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="9.2" class="num">9.2</div>
+              <div class="text">讀秒計數必須清楚地傳達給控盤者。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="9.3" class="num">9.3</div>
+              <div class="text">
+                守盤員只能在以下情形發生時開始並繼續讀秒計數：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.3.1" class="num">9.3.1</div>
+              <div class="text">
+                比賽是活盤狀態；或在盤權轉換後直到軸心點已建立；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.3.2" class="num">9.3.2</div>
+              <div class="text">
+                守盤員距離控盤者的軸心點三（3）公尺內，或控盤者未在軸心點位置，而守盤員距離正確的軸心點三（3）公尺內；以及
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.3.3" class="num">9.3.3</div>
+              <div class="text">
+                所有防守者均處於合法位置（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#18.1"
+                  >18.1</a
+                >）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="9.4" class="num">9.4</div>
+              <div class="text">
+                如果守盤員移動到距離正確的軸心點位置超過三（3）公尺，或者其他選手成為守盤員，則必須從“Stalling－One”重新開始讀秒計數。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="9.5" class="num">9.5</div>
+              <div class="text">在比賽中止之後，恢復讀秒計數的規定如下：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.5.1" class="num">9.5.1</div>
+              <div class="text">
+                在無爭議的防守隊的違法行為後，讀秒計數從“Stalling－One”重新開始。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.5.2" class="num">9.5.2</div>
+              <div class="text">
+                在無爭議的進攻隊的違法行為後，讀秒計數最多從九（Nine）開始。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.5.3" class="num">9.5.3</div>
+              <div class="text">
+                在有爭議的“超過規定時間未出手【Stall-out】”（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#13.2.2"
+                  >13.2.2</a
+                >）後，讀秒計數從“Stalling－Eight”開始。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.5.4" class="num">9.5.4</div>
+              <div class="text">
+                在其他所有宣告（包括【Pick】）後，讀秒計數最多從六（Six）開始；然而：
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="9.5.4.1" class="num">9.5.4.1</div>
+              <div class="text">
+                如果有跟控盤者相關的宣告發生，而另外有發生跟接盤者相關的違法行為，並且飛盤返回到原控盤者，讀秒計數恢復到與控盤者相關的宣告相關之規則所規定的秒數。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="9.5.4.2" class="num">9.5.4.2</div>
+              <div class="text">
+                如果違例宣告是與確認相關（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#10"
+                  >10</a
+                >），讀秒計數恢復到違例發生之前的相同秒數。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="9.6" class="num">9.6</div>
+              <div class="text">
+                要開始“最多從n”的讀秒計數（其中“n”依據<!-- -->規則<a
+                  class="ruleNum"
+                  href="#9.5.2"
+                  >9.5.2</a
+                >、
+                <!-- -->規則<a class="ruleNum" href="#9.5.4">9.5.4</a
+                >或<!-- -->規則<a class="ruleNum" href="#20.3.6">20.3.6</a
+                >定義），方式如下：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="9.6.1" class="num">9.6.1</div>
+              <div class="text">
+                如果“x”是雙方同意在宣告前最後完整說出的秒數，則讀秒計數將從“Stalling（x加1）”或“Stalling
+                n”開始，這兩個秒數取較低者。
+              </div>
+            </div>
+            <h2 id="10">10 確認</h2>
+            <div class="line" data-depth="2">
+              <div id="10.1" class="num">10.1</div>
+              <div class="text">
+                當比賽因犯規、違例、有爭議的盤權轉換、特定的盤權轉換、有爭議的得分、比賽中止、討論而停止或暫停結束時，比賽必須儘快經由確認重新開始。確認只可因討論宣告時延遲。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="10.2" class="num">10.2</div>
+              <div class="text">
+                在宣告後選手的位置如下（暫停除外，除非另有說明）：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.2.1" class="num">10.2.1</div>
+              <div class="text">
+                如果在傳盤之前比賽停止，則所有選手必須返回到發出宣告時的位置。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.2.2" class="num">10.2.2</div>
+              <div class="text">如果在傳盤後比賽停止，則：</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="10.2.2.1" class="num">10.2.2.1</div>
+              <div class="text">
+                如果飛盤返回到原控盤者，則所有選手必須返回到控盤者傳出飛盤或者發出宣告時（以較早發生者為準），他（她）們所在的位置。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="10.2.2.2" class="num">10.2.2.2</div>
+              <div class="text">
+                如果傳盤結果成立，所有選手必須返回到建立控盤權或飛盤落地時他（她）們所在的位置。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="10.2.2.3" class="num">10.2.2.3</div>
+              <div class="text">
+                如果控盤者以外的選手因無爭議的違法行為而獲得控盤權，則所有選手必須返回到違法行為發生時他（她）們所在的位置。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.2.3" class="num">10.2.3</div>
+              <div class="text">所有選手必須保持靜止狀態，直到飛盤被確認。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="10.3" class="num">10.3</div>
+              <div class="text">
+                所有選手都可以短暫延長比賽中止以修復損壞的裝備（“裝備暫停”【Equipment】），但不可以因此目的而停止正在進行中的比賽。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="10.4" class="num">10.4</div>
+              <div class="text">
+                在確認之前，將確認飛盤的選手和位置最近的對方選手必須審視他（她）們自己的隊友已經準備好，並按照<!-- -->規則<a
+                  class="ruleNum"
+                  href="#10.2"
+                  >10.2</a
+                >進行定位。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="10.5" class="num">10.5</div>
+              <div class="text">
+                如果確認飛盤前出現不必要的延遲，對手可以發出警告【Delay of
+                Game】。如果持續延誤，發出警告的隊伍可以透過宣告【Disc
+                In】來確認飛盤，而無需獲得對方的驗證，但前提是確認飛盤的隊伍都處於靜止狀態，且按照<!-- -->規則<a
+                  class="ruleNum"
+                  href="#10.2"
+                  >10.2</a
+                >進行定位。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="10.6" class="num">10.6</div>
+              <div class="text">如何經由確認重新開始比賽：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.6.1" class="num">10.6.1</div>
+              <div class="text">當控盤者擁有飛盤時：</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="10.6.1.1" class="num">10.6.1.1</div>
+              <div class="text">
+                如果有防守者可以碰觸到飛盤時，該防守者必須觸摸飛盤。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="10.6.1.2" class="num">10.6.1.2</div>
+              <div class="text">
+                如果沒有防守者可以碰觸到飛盤時，控盤者必須將飛盤碰觸地面，並可以宣告【Disc
+                In】。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.6.2" class="num">10.6.2</div>
+              <div class="text">
+                當飛盤在地面上時，最接近飛盤的防守者必須宣告【Disc In】。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="10.7" class="num">10.7</div>
+              <div class="text">
+                如果對手出現以下情況時，選手可以宣告確認的違例：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.7.1" class="num">10.7.1</div>
+              <div class="text">
+                在沒有依照<!-- -->規則<a class="ruleNum" href="#10.6">10.6</a
+                >確認飛盤的情況下嘗試投擲；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.7.2" class="num">10.7.2</div>
+              <div class="text">
+                在最近的對方選手尚未驗證的情況下重新開始比賽；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.7.3" class="num">10.7.3</div>
+              <div class="text">在準備確認的當下移動；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.7.4" class="num">10.7.4</div>
+              <div class="text">不在適當的位置；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="10.7.5" class="num">10.7.5</div>
+              <div class="text">
+                在這個違例宣告之後，無論傳盤是成功的還是不成功的，任何傳盤都不成立，並且將控盤權返回到原控盤者（除非適用<!-- -->規則<a
+                  class="ruleNum"
+                  href="#16.3"
+                  >16.3</a
+                >）。
+              </div>
+            </div>
+            <h2 id="11">11 出界</h2>
+            <div class="line" data-depth="2">
+              <div id="11.1" class="num">11.1</div>
+              <div class="text">
+                整個比賽場地都屬於界內。周圍邊線不是比賽場地的一部分，屬於界外。所有非選手都屬於界外區域的一部分。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.2" class="num">11.2</div>
+              <div class="text">
+                界外區域包括不是界內的地面及與其接觸的所有東西，但防守隊選手始終視為界內。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.3" class="num">11.3</div>
+              <div class="text">沒有出界的進攻者就算是在界內。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.3.1" class="num">11.3.1</div>
+              <div class="text">
+                在空中的選手保留其界內／出界的狀態，直到該選手與比賽場地或界外區接觸。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.3.2" class="num">11.3.2</div>
+              <div class="text">
+                選手在掌握飛盤後，如先接觸比賽場地再接觸到界外區域，仍然視為界內，只要持續的掌握飛盤直到建立控盤權。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="11.3.2.1" class="num">11.3.2.1</div>
+              <div class="text">
+                如果他（她）離開比賽場地，必須在他（她）越過邊線位置的比賽場地上建立軸心點（除非<!-- -->規則<a
+                  class="ruleNum"
+                  href="#14.3"
+                  >14.3</a
+                >有效）。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.3.3" class="num">11.3.3</div>
+              <div class="text">
+                接觸界外區的控盤者視為在界內，直到他（她）傳盤。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.3.4" class="num">11.3.4</div>
+              <div class="text">
+                選手之間的接觸不會賦予對方形成界內或界外的狀態。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.4" class="num">11.4</div>
+              <div class="text">
+                以下是出界的盤權轉換，視為沒有成功掌握飛盤：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.4.1" class="num">11.4.1</div>
+              <div class="text">接盤者的任何部分在接觸飛盤時出界；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.4.2" class="num">11.4.2</div>
+              <div class="text">
+                在空中掌握飛盤後，接盤者在仍然接觸飛盤的情況下，第一個與地面接觸的位置是在界外。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.5" class="num">11.5</div>
+              <div class="text">
+                比賽是活盤狀態或比賽開始或重新開始時，飛盤均屬於界內。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.6" class="num">11.6</div>
+              <div class="text">
+                飛盤出界是指飛盤一旦接觸到界外區域或一旦接觸到已經出界的進攻者時。進攻者掌握飛盤時，飛盤屬於界內／出界的狀態，與當時該選手屬於界內／出界的狀態相同。當飛盤同時由多位進攻者掌握時，此時如果其中一位選手是屬於出界的狀態，則飛盤算是出界。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.7" class="num">11.7</div>
+              <div class="text">
+                飛盤可以飛出邊線後返回到比賽場地，選手可以在界外區域接觸飛盤。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.8" class="num">11.8</div>
+              <div class="text">
+                飛盤出界的位置，由在第一次接觸出界區域或屬於出界狀態的選手之前，飛盤最後發生以下情況作為判定：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.8.1" class="num">11.8.1</div>
+              <div class="text">部分或完全在比賽場地上方；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="11.8.2" class="num">11.8.2</div>
+              <div class="text">被在界內的選手接觸。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="11.9" class="num">11.9</div>
+              <div class="text">
+                如果飛盤出界且距離軸心位置超過三（3）公尺，則非選手可以取回飛盤。離比賽場地最後三（3）公尺必須由控盤者攜帶飛盤回到比賽場地。
+              </div>
+            </div>
+            <h2 id="12">12 接盤和定位</h2>
+            <div class="line" data-depth="2">
+              <div id="12.1" class="num">12.1</div>
+              <div class="text">
+                選手“掌握Catch”飛盤表示，選手身體至少有二個部位之間夾住一片沒有旋轉的飛盤。掌握飛盤可以讓選手建立控盤權。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="12.1.1" class="num">12.1.1</div>
+              <div class="text">
+                如果選手在掌握飛盤當下與地面、與隊友或是與在合法位置的對手發生接觸而未能維持對飛盤持續的掌握，則視為從未建立控盤權。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.2" class="num">12.2</div>
+              <div class="text">在建立控盤權後，該選手則成為控盤者。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.3" class="num">12.3</div>
+              <div class="text">
+                如果進攻者和防守者同時掌握飛盤時，進攻隊保持擁有控盤權。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.4" class="num">12.4</div>
+              <div class="text">
+                處於既定位置的選手有權保持該位置，且對方選手不得與其有身體接觸。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.5" class="num">12.5</div>
+              <div class="text">
+                每位選手都有權在比賽場地上，佔據任何對方選手尚未佔據的位置，前提是他（她）沒有因為奪取其位置而引發與對手的接觸，並且不以魯莽或危險的方式移動。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="12.5.1" class="num">12.5.1</div>
+              <div class="text">
+                但是，當飛盤在空中時，選手不可以純粹為了防止對手採用無人佔用之路徑爭奪飛盤，而移動。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.6" class="num">12.6</div>
+              <div class="text">
+                所有選手都必須​​嘗試避免與其他選手發生肢體接觸，並且沒有任何狀況足以正當化前述行為，這包括避免與靜止的對手或以既定速度和方向行進的對手在預期位置發生接觸；“為了爭取飛盤”不是引發與其他選手接觸的有效藉口。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="12.6.1" class="num">12.6.1</div>
+              <div class="text">
+                如果選手不能合理地確定能夠在合法移動的對手之前，合法地爭奪飛盤，選手必須調整他（她）的動作以避免引發接觸。如果做到了上述調整，比賽結果仍然有效。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.7" class="num">12.7</div>
+              <div class="text">誰符合被認定為引發接觸的選手：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="12.7.1" class="num">12.7.1</div>
+              <div class="text">
+                選手到達接觸點之前，對手已經在該點建立合法位置（不論是靜止或移動的對手）；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="12.7.2" class="num">12.7.2</div>
+              <div class="text">
+                在考慮到所有選手既定位置、速度和方向的情況下，因他（她）的動作調整，製造了與合法移動的對手不可避免的接觸。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.8" class="num">12.8</div>
+              <div class="text">
+                比賽時可能有因為兩位或兩位以上選手向同一個點移動而發生的輕微接觸；這些輕微接觸應盡量避免，但不視為犯規。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.9" class="num">12.9</div>
+              <div class="text">選手不得用手臂或腳阻礙對方選手的移動。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="12.10" class="num">12.10</div>
+              <div class="text">
+                所有選手不得以任何方式協助其他選手移動，也不得使用裝備或物品來協助接觸飛盤。
+              </div>
+            </div>
+            <h2 id="13">13 盤權轉換</h2>
+            <div class="line" data-depth="2">
+              <div id="13.1" class="num">13.1</div>
+              <div class="text">
+                在以下情況發生時，控盤權將從一個隊伍轉換到另一個隊伍：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.1.1" class="num">13.1.1</div>
+              <div class="text">
+                飛盤接觸地面時沒有任何進攻隊選手擁有控盤權（“落地Down”）；
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="13.1.1.1" class="num">13.1.1.1</div>
+              <div class="text">
+                如果選手在飛盤接觸地面之前掌握飛盤，並且在飛盤接觸地面時持續掌握飛盤，則飛盤不視為落地。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.1.2" class="num">13.1.2</div>
+              <div class="text">
+                傳盤時被防守者建立控盤權（“攔截 Interception”）；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.1.3" class="num">13.1.3</div>
+              <div class="text">飛盤形成出界（“出界Out”）；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.1.4" class="num">13.1.4</div>
+              <div class="text">
+                在發盤過程中，進攻隊伍在飛盤接觸地面前碰觸到飛盤，但後來未能建立控盤權（“接發盤掉盤Dropped
+                pull”）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.2" class="num">13.2</div>
+              <div class="text">
+                在以下情況發生時進攻者有意地將飛盤轉交給另外一位進攻選手控盤權將從一個隊伍轉換到另一個隊伍，並且將導致比賽中止：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.2.1" class="num">13.2.1</div>
+              <div class="text">發生無爭議的進攻接盤犯規時；</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.2.2" class="num">13.2.2</div>
+              <div class="text">
+                控盤者飛盤尚未出手之前，守盤員已經於讀秒計數時開始說出十“Ten”
+                （“控盤超過規定時間未出手【Stall-out】”）；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.2.3" class="num">13.2.3</div>
+              <div class="text">
+                進攻者有意地將飛盤轉交給隊友，轉交時二位選手同時碰觸飛盤（“遞交【Hand-over】”）；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.2.4" class="num">13.2.4</div>
+              <div class="text">
+                控盤者為了使飛盤改變方向後回自己手上，而故意將飛盤投擲到其他選手身上（“偏轉【Deflection】”）；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.2.5" class="num">13.2.5</div>
+              <div class="text">
+                在傳盤時，控盤者在飛盤出手後，且在另一位選手碰觸飛盤前，掌握了飛盤（“自接【Self-catch】”）；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.2.6" class="num">13.2.6</div>
+              <div class="text">進攻者故意協助隊友移動去掌握飛盤；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.2.7" class="num">13.2.7</div>
+              <div class="text">進攻者使用裝備或物品來協助掌握飛盤。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.3" class="num">13.3</div>
+              <div class="text">
+                如果選手確定發生盤權轉換，他（她）必須立即提出適當的宣告；如果對手不同意，他（她）可以宣告【Contest】並且比賽必須中止，如果經過討論，選手不能同意或不清楚比賽中發生了什麼，則必須將飛盤返回到最後一位無爭議的控盤者。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.4" class="num">13.4</div>
+              <div class="text">在宣告【Stall-out】之後：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.4.1" class="num">13.4.1</div>
+              <div class="text">
+                如果控盤者仍然擁有控盤權時，且他（她）相信因發生讀秒計數過快的情形，使得發生控盤超過規定時間未出手之前沒有合理的機會宣告【Fast
+                count】，這個情形將視為一個無爭議的防守隊違法行為（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#9.5.1"
+                  >9.5.1</a
+                >）或一個有爭議的【Stall-out】（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#9.5.3"
+                  >9.5.3</a
+                >）。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.4.2" class="num">13.4.2</div>
+              <div class="text">
+                如果控盤者完成傳盤，且控盤者認為這不是控盤超過規定時間未出手，或者在宣告【Stall-out】之前立即發生了讀秒計數過快，則控盤者可以提出爭議。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.4.3" class="num">13.4.3</div>
+              <div class="text">
+                如果控盤者對於【Stall-out】提出爭議且已經傳盤，但該傳盤失敗，則盤權轉換仍然發生且比賽經由確認重新開始。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.5" class="num">13.5</div>
+              <div class="text">
+                任何進攻隊選手在盤權轉換後均可以擁有控盤權，但以下情況除外：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.5.1" class="num">13.5.1</div>
+              <div class="text">
+                在攔截後，進行攔截的選手必須持續擁有控盤權；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.5.2" class="num">13.5.2</div>
+              <div class="text">
+                在進攻者產生接盤犯規後，被犯規的選手必須擁有控盤權。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.6" class="num">13.6</div>
+              <div class="text">
+                如果選手在盤權轉換後擁有控盤權，或在發盤後拿起已經接觸地面的飛盤，然後故意使飛盤掉地、將飛盤放在地上或轉交控盤權，則該選手必須再次建立控盤權，比賽經由確認重新開始。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.7" class="num">13.7</div>
+              <div class="text">盤權轉換後，轉換的位置為：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.7.1" class="num">13.7.1</div>
+              <div class="text">飛盤完全停止或被進攻者拿起的位置；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.7.2" class="num">13.7.2</div>
+              <div class="text">攔截飛盤的選手停止的位置；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.7.3" class="num">13.7.3</div>
+              <div class="text">
+                關於<!-- -->規則<a class="ruleNum" href="#13.2.2">13.2.2</a
+                >、13.2.3、13.2.4、13.2.5，宣告發生時，控盤者的位置；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.7.4" class="num">13.7.4</div>
+              <div class="text">
+                關於<!-- -->規則<a class="ruleNum" href="#13.2.6">13.2.6</a
+                >、13.2.7，進攻者的位置；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.7.5" class="num">13.7.5</div>
+              <div class="text">無爭議的進攻隊接盤犯規發生的位置。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.8" class="num">13.8</div>
+              <div class="text">
+                如果盤權轉換的位置在界外，或飛盤在盤權轉換後接觸界外區域，則控盤者必須在爭奪區裡離飛盤出界點最近的位置建立軸心點（<!-- -->規則<a
+                  class="ruleNum"
+                  href="#11.8"
+                  >11.8</a
+                >）。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.8.1" class="num">13.8.1</div>
+              <div class="text">
+                如果<!-- -->規則<a class="ruleNum" href="#13.8">13.8</a
+                >不適用，則必須根據<!-- -->規則<a class="ruleNum" href="#13.9"
+                  >13.9</a
+                >、<!-- -->規則<a class="ruleNum" href="#13.10">13.10</a
+                >或<!-- -->規則<a class="ruleNum" href="#13.11">13.11</a
+                >建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.9" class="num">13.9</div>
+              <div class="text">
+                如果盤權轉換發生在爭奪區，則控盤者必須在該位置建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.10" class="num">13.10</div>
+              <div class="text">
+                如果盤權轉換發生在進攻隊伍進攻的得分區，則控盤者必須在得分線上的最近的位置建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.11" class="num">13.11</div>
+              <div class="text">
+                如果盤權轉換發生在進攻隊伍防守的得分區，控盤者可以選擇在哪裡建立軸心點：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.11.1" class="num">13.11.1</div>
+              <div class="text">
+                在盤權轉換的位置，控盤者應該在該處停留或做傳盤動作；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.11.2" class="num">13.11.2</div>
+              <div class="text">
+                在得分線上距離盤權轉換最接近的位置，控盤者應該離開盤權轉換的位置。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="13.11.2.1" class="num">13.11.2.1</div>
+              <div class="text">
+                在拿起飛盤之前，預定的控盤者可以將一隻手臂高舉過頭以發出得分線選項的信號。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="13.11.3" class="num">13.11.3</div>
+              <div class="text">
+                立即移動、停留在盤權轉換的位置、做傳盤動作或發出得分線選項的信號都表示選擇了在何處建立軸心點，且不可更改。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="13.12" class="num">13.12</div>
+              <div class="text">
+                如果在無爭議的盤權轉換後，比賽在不知不覺中繼續，此時比賽停止，飛盤須返回到盤權轉換的位置，選手亦須返回盤權轉換時的位置，並經由確認重新開始。
+              </div>
+            </div>
+            <h2 id="14">14 得分</h2>
+            <div class="line" data-depth="2">
+              <div id="14.1" class="num">14.1</div>
+              <div class="text">得分是當界內的選手掌握了合法傳盤；並且：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="14.1.1" class="num">14.1.1</div>
+              <div class="text">
+                選手所有與地面接觸的點都完全在他（她）進攻端的得分區內；然而對於在空中的選手來說，他（她）在掌握飛盤後同時第一個與地面接觸的點都完全在他（她）進攻端的得分區內；並且
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="14.1.2" class="num">14.1.2</div>
+              <div class="text">
+                選手隨後建立控盤權，且與掌握飛盤時所有相關的地面接觸期間仍持續掌握飛盤（註：<!-- -->規則<a
+                  class="ruleNum"
+                  href="#12.1"
+                  >12.1</a
+                >、<!-- -->規則<a class="ruleNum" href="#12.1.1">12.1.1</a>）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="14.2" class="num">14.2</div>
+              <div class="text">
+                如果一位選手認為得分，他（她）可以宣告【Goal】，此時停止比賽；在有爭議或收回的得分宣告後，比賽經由確認重新開始，宣告時間點的認定為選手建立控盤權的時間點。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="14.3" class="num">14.3</div>
+              <div class="text">
+                如果持有飛盤的選手最終在進攻端得分區裡將建立軸心點，而沒有根據<!-- -->規則<a
+                  class="ruleNum"
+                  href="#14.1"
+                  >14.1</a
+                >得分，則選手必須在得分線上最接近的位置建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="14.4" class="num">14.4</div>
+              <div class="text">得分時間點的認定是選手建立控盤權的時間。</div>
+            </div>
+            <h2 id="15">15 宣告犯規、違規及違例</h2>
+            <div class="line" data-depth="2">
+              <div id="15.1" class="num">15.1</div>
+              <div class="text">
+                兩位或兩位以上對方選手之間的非輕微接觸的發生，這樣的違法行為是犯規。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="15.1.1" class="num">15.1.1</div>
+              <div class="text">
+                選手故意引發的輕微接觸仍然屬於違法行為，但應視為違例，而不是犯規。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.2" class="num">15.2</div>
+              <div class="text">
+                有關守盤員或走步的違法行為，有些是屬於違規；違規並不會停止比賽。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.3" class="num">15.3</div>
+              <div class="text">其他所有違法行為都是違例。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.4" class="num">15.4</div>
+              <div class="text">
+                只有被犯規的選手可以透過宣告【Foul】，以主張犯規。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.5" class="num">15.5</div>
+              <div class="text">
+                一般而言，只有控盤者可以宣告違規，宣告時應使用具體的名稱。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="15.5.1" class="num">15.5.1</div>
+              <div class="text">
+                然而，任何進攻隊選手都可以宣告“包夾防守【Double
+                Team】”，任何防守隊選手都可以宣告“走步【Travel】”。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.6" class="num">15.6</div>
+              <div class="text">
+                任何對方選手都可以宣告具體的違例名稱以主張違例或是宣告【Violation】，除非特定規則另有說明。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.7" class="num">15.7</div>
+              <div class="text">
+                當發出停止比賽的犯規或違例宣告時，所有選手一旦知道宣告，必須立即透過聲音或手勢傳達比賽停止，並且應響應場上的宣告；如果比賽因為討論而停止，但未發出任何宣告，則當討論開始的當下即視為已經發出宣告的時間點。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.8" class="num">15.8</div>
+              <div class="text">當發現違規行為後，必須立即發出宣告。</div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.9" class="num">15.9</div>
+              <div class="text">
+                當選手錯誤地停止比賽，包括在誤聽宣告、不知道規則或沒有立即發出宣告後：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="15.9.1" class="num">15.9.1</div>
+              <div class="text">
+                如果對方取得或擁有控盤權，則後續比賽均屬有效，
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="15.9.2" class="num">15.9.2</div>
+              <div class="text">
+                如果對手沒有取得或擁有控盤權，則飛盤必須返回到最後一位無爭議的控盤者；除非適用<!-- -->規則<a
+                  class="ruleNum"
+                  href="#16.3"
+                  >16.3</a
+                >。開始讀秒計數，如同無爭議的違法行為是由錯誤導致比賽中止的選手所造成。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.10" class="num">15.10</div>
+              <div class="text">
+                如果選手不同意被叫犯規、違規或違例的宣告，或不認為這是一個正確的宣告，他（她）可以發出宣告【Contest】。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.11" class="num">15.11</div>
+              <div class="text">
+                如果發出任何宣告的選手，隨後判斷他（她）的宣告並不正確，則可以透過宣告【Retracted】來收回宣告；開始讀秒計數，如同無爭議的違法行為是由該選手所造成。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.12" class="num">15.12</div>
+              <div class="text">
+                如果在比賽停止之前發生多次未被解決的違法行為，應該以相反的順序依序處理（最晚發生的違法行為優先處理，最早的違法行為最後處理）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="15.13" class="num">15.13</div>
+              <div class="text">
+                鼓勵所有選手使用 WFDF 手勢信號來傳達所有宣告。
+              </div>
+            </div>
+            <h2 id="16">16 犯規或違例後繼續比賽</h2>
+            <div class="line" data-depth="2">
+              <div id="16.1" class="num">16.1</div>
+              <div class="text">
+                每當發出犯規或違例宣告，或選手嘗試以任何方式中止比賽時，比賽立即停止，並且不可能盤權轉換（除非<!-- -->規則<a
+                  class="ruleNum"
+                  href="#15.9"
+                  >15.9</a
+                >、<!-- -->規則<a class="ruleNum" href="#16.2">16.2</a
+                >及<!-- -->規則<a class="ruleNum" href="#16.3">16.3</a
+                >提出的情況）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="16.2" class="num">16.2</div>
+              <div class="text">如果犯規或違例：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="16.2.1" class="num">16.2.1</div>
+              <div class="text">是針對控盤者的宣告，且控盤者隨後傳盤；或者</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="16.2.2" class="num">16.2.2</div>
+              <div class="text">
+                宣告是由控盤者發出，且是在控盤者進行投擲動作中發出的；或者
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="16.2.3" class="num">16.2.3</div>
+              <div class="text">
+                發生或宣告發出時飛盤在空中，比賽繼續進行，直到控盤權被建立。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="16.2.4" class="num">16.2.4</div>
+              <div class="text">建立控盤權後：</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="16.2.4.1" class="num">16.2.4.1</div>
+              <div class="text">
+                如果宣告犯規或違例的隊伍取得或擁有控盤權，則比賽成立；如果宣告犯規或違例的選手盡快宣告“繼續比賽【Play
+                on】”，比賽可以不中斷地繼續進行。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="16.2.4.2" class="num">16.2.4.2</div>
+              <div class="text">
+                如果宣告犯規或違例的隊伍並沒有取得或擁有控盤權，則必須停止比賽。
+              </div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="16.2.4.2.1" class="num">16.2.4.2.1</div>
+              <div class="text">
+                如果宣告犯規或違例的隊伍認為盤權受到犯規或違例的影響，則飛盤將返回到原控盤者，並且比賽經由確認重新開始（除非特定規則另有說明）。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="16.3" class="num">16.3</div>
+              <div class="text">
+                無論何時發出任何宣告，如果與宣告相關的雙方選手同意該事件或宣告並不影響比賽結果，則結果成立；此規則不會被任何其他規則取而代之。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="16.3.1" class="num">16.3.1</div>
+              <div class="text">如果比賽形成得分，則得分成立。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="16.3.2" class="num">16.3.2</div>
+              <div class="text">
+                如果比賽沒有形成得分，受影響的選手可以彌補因該事件或宣告而造成增加劣勢的位置，比賽經由確認重新開始。
+              </div>
+            </div>
+            <h2 id="17">17 犯規</h2>
+            <div class="line" data-depth="2">
+              <div id="17.1" class="num">17.1</div>
+              <div class="text">危險行為：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.1.1" class="num">17.1.1</div>
+              <div class="text">
+                表現出魯莽且漠視其他選手的安全，或對其他選手造成重大的受傷風險，或其他危險的攻擊行為，無論是否或何時發生接觸，都視為危險行為，應屬犯規；此規則不會被任何其他犯規的規則取代，
+                如果危險行為的宣告無爭議，這必須視為規則第17章中最相關的犯規。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.2" class="num">17.2</div>
+              <div class="text">接盤犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.2.1" class="num">17.2.1</div>
+              <div class="text">
+                接盤犯規，任何選手與對手，在其中一人爭奪飛盤之前、當下或之後即刻，引發與對手發生的非輕微接觸。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="17.2.1.1" class="num">17.2.1.1</div>
+              <div class="text">
+                在飛盤已被掌握，或對手已無法爭奪飛盤的狀況下，與對手的手臂或手發生接觸，此依據並不構成犯規，但應避免（這不包括與<!-- -->規則<a
+                  class="ruleNum"
+                  href="#17.1"
+                  >17.1</a
+                >和<!-- -->規則<a class="ruleNum" href="#17.3">17.3</a
+                >有關的接觸）。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.2.2" class="num">17.2.2</div>
+              <div class="text">
+                在無爭議的接盤犯規後，被犯規的選手在犯規發生地點建立控盤權，即使該點位於得分區內，則比賽經由確認重新開始。如果確認後適用<!-- -->規則<a
+                  class="ruleNum"
+                  href="#14.3"
+                  >14.3</a
+                >，直到選手在得分線上最接近的位置建立軸心點之前，不得讀秒計數；如果犯規有爭議，飛盤將返回到原控盤者。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.3" class="num">17.3</div>
+              <div class="text">剝奪犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.3.1" class="num">17.3.1</div>
+              <div class="text">
+                “剝奪【Strip】”犯規，當對手犯規使得選手已經掌握的飛盤掉落或失去控盤權。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.3.2" class="num">17.3.2</div>
+              <div class="text">
+                如果情況本來應該是得分，而犯規無爭議，那就算是一個得分。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.4" class="num">17.4</div>
+              <div class="text">阻擋犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.4.1" class="num">17.4.1</div>
+              <div class="text">
+                “阻擋Blocking
+                Foul”犯規，一位正在合法移動的對手，在考慮其既定的速度與方向之預期位置後，而佔據了對手無法避免肢體接觸的位置，且導致非輕微的接觸，這將視為接盤犯規或間接犯規，以適用者為準。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.5" class="num">17.5</div>
+              <div class="text">逼迫犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.5.1" class="num">17.5.1</div>
+              <div class="text">
+                “逼迫【Force-out】”犯規，當接盤員在建立控盤權的過程中被防守者犯規，且與接盤員發生的肢體接觸使接盤員：
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="17.5.1.1" class="num">17.5.1.1</div>
+              <div class="text">成為出界而不在界內；或者</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="17.5.1.2" class="num">17.5.1.2</div>
+              <div class="text">
+                在爭奪區掌握飛盤，而不是他（她）進攻的得分區。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.5.2" class="num">17.5.2</div>
+              <div class="text">
+                如果接盤者原本將在他（她）進攻的得分區內掌握飛盤，這是一個得分；
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.5.3" class="num">17.5.3</div>
+              <div class="text">
+                如果【Force-out】是有爭議的，而接盤員成為出界，飛盤將返回到原控盤者，否則飛盤將屬於接盤者。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.6" class="num">17.6</div>
+              <div class="text">守盤員犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.6.1" class="num">17.6.1</div>
+              <div class="text">以下情形屬“守盤員Marking”犯規：</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="17.6.1.1" class="num">17.6.1.1</div>
+              <div class="text">
+                防守者處於非法位置（<!-- -->規則<a class="ruleNum" href="#18.1"
+                  >18.1</a
+                >），且該該防守者與控盤者發生非輕微的接觸；或者
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="17.6.1.2" class="num">17.6.1.2</div>
+              <div class="text">
+                飛盤投擲前，防守者引發與控盤者的非輕微接觸，或者控盤者與防守者爭奪同一個無人佔用的空間而引發非輕微接觸。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="17.6.1.3" class="num">17.6.1.3</div>
+              <div class="text">
+                如果在控盤者投擲飛盤之前發生守盤員犯規，而不是在投擲動作期間發生，則控盤者可以選擇宣告“接觸【Contact】”違規；【Contact】如無爭議，比賽不會停止，守盤員必須從一
+                （One）開始讀秒計數。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.7" class="num">17.7</div>
+              <div class="text">進攻控盤者犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.7.1" class="num">17.7.1</div>
+              <div class="text">
+                “進攻控盤者Thrower”犯規，當控盤者全權負責引發與處於合法位置的防守者之非輕微接觸時，這屬於進攻控盤者犯規。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.7.2" class="num">17.7.2</div>
+              <div class="text">
+                控盤者在投擲後的延伸動作中發生接觸，並不足以構成犯規，但應避免。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.8" class="num">17.8</div>
+              <div class="text">間接犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.8.1" class="num">17.8.1</div>
+              <div class="text">
+                “間接Indirect”犯規，當接盤者和防守者之間發生非輕微的接觸，但並不直接影響嘗試爭奪飛盤時。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.8.2" class="num">17.8.2</div>
+              <div class="text">
+                如果犯規無爭議，被犯規的選手可以調整位置來彌補因為犯規而造成增加劣勢的位置。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="17.9" class="num">17.9</div>
+              <div class="text">抵消犯規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.9.1" class="num">17.9.1</div>
+              <div class="text">
+                “抵消Offsetting”犯規，當進攻者和防守者各自宣告一個無爭議的犯規，飛盤必須返回到最後一位無爭議的控盤者。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="17.9.2" class="num">17.9.2</div>
+              <div class="text">
+                因兩位或兩位以上對方選手同時向同一點移動，而發生的非輕微接觸，必須視為抵消犯規。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="17.9.2.1" class="num">17.9.2.1</div>
+              <div class="text">
+                然而，如果這種情況發生在飛盤被掌握，或者相關的所有選手無法繼續競爭飛盤之後，則必須視為間接犯規（這不包括與<!-- -->規則<a
+                  class="ruleNum"
+                  href="#17.1"
+                  >17.1</a
+                >相關的接觸）。
+              </div>
+            </div>
+            <h2 id="18">18 違規及違例</h2>
+            <div class="line" data-depth="2">
+              <div id="18.1" class="num">18.1</div>
+              <div class="text">守盤違規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.1.1" class="num">18.1.1</div>
+              <div class="text">守盤違規包括以下情形：</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.1.1" class="num">18.1.1.1</div>
+              <div class="text">“讀秒計數過快【Fast Count】”－守盤員：</div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="18.1.1.1.1" class="num">18.1.1.1.1</div>
+              <div class="text">非法開始或繼續讀秒計數；</div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="18.1.1.1.2" class="num">18.1.1.1.2</div>
+              <div class="text">守盤員沒有宣告【Stalling】即開始讀秒計數；</div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="18.1.1.1.3" class="num">18.1.1.1.3</div>
+              <div class="text">讀秒計數的間隔不到一秒的時間；</div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="18.1.1.1.4" class="num">18.1.1.1.4</div>
+              <div class="text">
+                必須時，沒有減少應該的秒數或沒有重新開始讀秒計數；或者
+              </div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="18.1.1.1.5" class="num">18.1.1.1.5</div>
+              <div class="text">沒有從正確的秒數開始讀秒計數。</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.1.2" class="num">18.1.1.2</div>
+              <div class="text">
+                “跨越【Straddle】”－防守者兩腳之間的一條線侵入控盤者軸心點一個飛盤的直徑範圍內。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.1.3" class="num">18.1.1.3</div>
+              <div class="text">
+                “飛盤空間【Disc
+                Space】”－防守者的任何部分距離控盤者的身體不到一個飛盤直徑；但是，如果這種情況完全由控盤者的移動而引起，則不屬於違規。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.1.4" class="num">18.1.1.4</div>
+              <div class="text">
+                “包圍【Wrapping】”－防守者的手或手臂之間的一條線侵入控盤者軀幹一個飛盤的直徑範圍內，或者防守者身體的任何部位位於控盤者的軸心點上方；但是，如果這種情況完全由控盤者的移動而引起，則不屬於違規。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.1.5" class="num">18.1.1.5</div>
+              <div class="text">
+                “包夾防守【Double
+                Team】”－除了守盤員以外，其他防守者距離控盤者的軸心點不到三（3）公尺，而且也沒有在防守其他進攻隊選手；然而，僅是通過這個區域時並不算是包夾防守。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.1.6" class="num">18.1.1.6</div>
+              <div class="text">
+                “視野【Vision】”－防守者使用身體的任何部分故意阻礙控盤者的視野。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.1.2" class="num">18.1.2</div>
+              <div class="text">
+                當防守者被對方提出守盤違規宣告時，可以提出爭議，在這種情況下比賽停止。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.2.1" class="num">18.1.2.1</div>
+              <div class="text">
+                如果傳盤成功，一個有爭議或被撤回的守盤違規，必須視為進攻隊違例，飛盤必須返回到原控盤者。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.1.3" class="num">18.1.3</div>
+              <div class="text">
+                在<!-- -->規則<a class="ruleNum" href="#18.1.1">18.1.1</a
+                >中所列的項目，若是無爭議的宣告，守盤員可以直接繼續讀秒計數，必須從宣告時最後一個完全讀出的秒數減一（1）開始。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.1.4" class="num">18.1.4</div>
+              <div class="text">
+                在修正任何非法站位之前，守盤員不得恢復讀秒計數，否則即是另一個守盤違規。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.1.5" class="num">18.1.5</div>
+              <div class="text">
+                控盤者可以宣告守盤違例並停止比賽，以替代宣告守盤違規，如果；
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.5.1" class="num">18.1.5.1</div>
+              <div class="text">讀秒計數未修正；</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.5.2" class="num">18.1.5.2</div>
+              <div class="text">沒有讀秒計數；</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.5.3" class="num">18.1.5.3</div>
+              <div class="text">有嚴重的守盤違規；或者</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.1.5.4" class="num">18.1.5.4</div>
+              <div class="text">持續重複守盤違規的模式。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.1.6" class="num">18.1.6</div>
+              <div class="text">
+                如果守盤違規或守盤違例被宣告，並且在宣告之前、期間或之後嘗試投擲，則宣告沒有意義（除非適用<!-- -->規則<a
+                  class="ruleNum"
+                  href="#18.1.2.1"
+                  >18.1.2.1</a
+                >），如果傳盤失敗，則盤權轉換成立。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="18.2" class="num">18.2</div>
+              <div class="text">“走步【Travel】”違規：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.1" class="num">18.2.1</div>
+              <div class="text">
+                只要控盤者完全在界內或已經在界內建立軸心點，他（她）可以隨時傳盤。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.1.1" class="num">18.2.1.1</div>
+              <div class="text">
+                然而，界內的選手在空中掌握飛盤時，可以在接觸地面之前傳盤。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.2" class="num">18.2.2</div>
+              <div class="text">
+                在掌握飛盤後，控盤者必須儘快減慢速度，並且不得改變方向，直到他（她）建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.2.1" class="num">18.2.2.1</div>
+              <div class="text">
+                但是，如果選手在跑動或跳躍時掌握飛盤，選手可以在不嘗試減慢速度和不建立軸心點的情況下傳盤，前提是：
+              </div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="18.2.2.1.1" class="num">18.2.2.1.1</div>
+              <div class="text">選手在傳盤前沒有改變方向或增加速度；以及</div>
+            </div>
+            <div class="line" data-depth="5">
+              <div id="18.2.2.1.2" class="num">18.2.2.1.2</div>
+              <div class="text">
+                在掌握飛盤之後到傳盤之前，最多有兩個額外的與地面接觸的點。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.3" class="num">18.2.3</div>
+              <div class="text">
+                控盤者只能以透過建立的“軸心點Pivot
+                point”為軸心向任何方向轉動（“跨步”）；“軸心點Pivot
+                point”是場地上一個特定的點，與控盤者身體的一部份保持持續接觸，直到飛盤出手。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.4" class="num">18.2.4</div>
+              <div class="text">
+                控盤者不是保持站立時，可以使用身體的任何一部份作為軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.4.1" class="num">18.2.4.1</div>
+              <div class="text">
+                如果他（她）站起來不算是走步，但是，必須在相同的位置建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.5" class="num">18.2.5</div>
+              <div class="text">【Travel】違規包括以下情形：</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.5.1" class="num">18.2.5.1</div>
+              <div class="text">
+                控盤者在場上錯誤的位置建立軸心點，包括掌握飛盤後，未儘快的減慢速度，或在掌握飛盤後改變方向；
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.5.2" class="num">18.2.5.2</div>
+              <div class="text">
+                控盤者在投擲飛盤時違反<!-- -->規則<a
+                  class="ruleNum"
+                  href="#18.2.2.1"
+                  >18.2.2.1</a
+                >；
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.5.3" class="num">18.2.5.3</div>
+              <div class="text">
+                任何時候控盤者必須移動到指定的位置，並且控盤者在沒有建立軸心點之前，開始進行預備投擲動作或投擲動作；
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.5.4" class="num">18.2.5.4</div>
+              <div class="text">
+                控盤者無法保持已經建立的軸心點，直到飛盤出手；
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.5.5" class="num">18.2.5.5</div>
+              <div class="text">
+                選手故意利用拍盤、旋盤、碰盤，其唯一目的是為了向特定的方向移動。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.6" class="num">18.2.6</div>
+              <div class="text">在無爭議的【Travel】後，比賽不會停止。</div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.6.1" class="num">18.2.6.1</div>
+              <div class="text">
+                控盤者應該立即依宣告走步的選手所指示的正確位置，建立軸心點，雙方不可以拖延。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.6.2" class="num">18.2.6.2</div>
+              <div class="text">
+                讀秒計數必須暫停。控盤者不得投擲飛盤，直到在正確的位置建立軸心點。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.2.6.3" class="num">18.2.6.3</div>
+              <div class="text">
+                在開始讀秒計數之前，守盤員不需要宣告【Stalling】。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.7" class="num">18.2.7</div>
+              <div class="text">
+                如果走步違規後，但在尚未回到正確軸心點之前，控盤者已經出手且傳盤成功，防守隊伍可以宣告【Travel】，此時比賽停止，飛盤應返回到原控盤者，控盤者必須返回到違規時佔用的位置，比賽經由確認重新開始。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.8" class="num">18.2.8</div>
+              <div class="text">
+                如果在走步違規後，控盤者傳盤失敗，比賽繼續。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.2.9" class="num">18.2.9</div>
+              <div class="text">
+                在有爭議的【Travel】後，控盤者如未投擲飛盤，比賽將停止。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="18.3" class="num">18.3</div>
+              <div class="text">“非法阻擋【Pick】”違例：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.3.1" class="num">18.3.1</div>
+              <div class="text">
+                如果防守者正在防守一位進攻者，而被另一位選手阻止他（她）向或跟者該被防守的選手移動，則該防守者可以宣告【Pick】；然而，如果被防守的選手和阻礙的選手都在嘗試爭奪飛盤，則不屬於非法阻擋。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.3.1.1" class="num">18.3.1.1</div>
+              <div class="text">
+                在宣告【Pick】之前，防守者可以延遲兩（2）秒再宣告，以確定這個非法阻擋是否會影響比賽。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.3.2" class="num">18.3.2</div>
+              <div class="text">
+                如果比賽停止，被非法阻擋的防守者，可以移動到雙方同意在沒有發生非法阻擋的情況下他（她）應有的位置，除非特定規則另有說明。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="18.3.3" class="num">18.3.3</div>
+              <div class="text">
+                所有選手都應該合理的努力，來避免非法阻擋發生。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="18.3.3.1" class="num">18.3.3.1</div>
+              <div class="text">
+                在任何比賽停止期間，雙方選手可以同意稍微調整位置，以避免潛在的非法阻擋。
+              </div>
+            </div>
+            <h2 id="19">19 維護安全的比賽中止</h2>
+            <div class="line" data-depth="2">
+              <div id="19.1" class="num">19.1</div>
+              <div class="text">受傷停止：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.1.1" class="num">19.1.1</div>
+              <div class="text">
+                受傷停止【Injury】，可以由受傷選手或受傷選手的任何隊友宣告。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.1.2" class="num">19.1.2</div>
+              <div class="text">
+                如果受傷不是由對方選手造成的，選手必須選擇換人，或者使用自己的隊伍的一次暫停。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.1.3" class="num">19.1.3</div>
+              <div class="text">
+                如果受傷是由對方選手造成的，選手可以選擇留在場上或換人。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.1.4" class="num">19.1.4</div>
+              <div class="text">
+                如果受傷的選手已經擁有控盤權，但選手因為受傷而掉落了飛盤，則該選手應保留飛盤的控盤權。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.1.5" class="num">19.1.5</div>
+              <div class="text">
+                受傷停止的當下即視為已經發出受傷宣告的時間點，除非受傷的選手在宣告停止比賽之前選擇繼續比賽。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.1.6" class="num">19.1.6</div>
+              <div class="text">
+                如果在宣告受傷停止時，飛盤仍在空中，則比賽繼續，直到建立控盤權或者飛盤掉落地面；如果受傷不是因為對手犯規造成的，則成功的傳盤或盤權轉換是成立的，比賽在該點中止後重新開始。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="19.2" class="num">19.2</div>
+              <div class="text">技術停止：</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.2.1" class="num">19.2.1</div>
+              <div class="text">
+                任何選手如果意識到有可能發生危害選手的情況，包括選手有開放性或流血的傷口時，可宣告【Technical】或【Stop】停止比賽；比賽必須立即停止。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="19.2.1.1" class="num">19.2.1.1</div>
+              <div class="text">
+                隊友、教練或指派的官方人員應主動積極地提醒選手，注意任何危害選手安全的情況。
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="19.2.1.2" class="num">19.2.1.2</div>
+              <div class="text">
+                選手有開放性或流血的傷口問題時，有七十（70）秒的時間來有效的解決該問題；如果需要額外的時間來解決這個問題，他（她）們必須選擇更換選手，或者使用自己隊伍的一次暫停。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.2.2" class="num">19.2.2</div>
+              <div class="text">
+                控盤者可以在比賽期間宣告技術停止，以更換嚴重損壞的飛盤。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.2.3" class="num">19.2.3</div>
+              <div class="text">
+                如果宣告技術停止時飛盤在空中，或在技術停止宣告後比賽仍然在不知情的情況下繼續進行：
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="19.2.3.1" class="num">19.2.3.1</div>
+              <div class="text">
+                如果宣告或問題並不影響比賽，則成功的傳盤或盤權轉換是成立的，比賽在該點重新開始；
+              </div>
+            </div>
+            <div class="line" data-depth="4">
+              <div id="19.2.3.2" class="num">19.2.3.2</div>
+              <div class="text">
+                如果宣告或問題確實影響比賽，則飛盤將返回給原控盤者。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="19.3" class="num">19.3</div>
+              <div class="text">
+                如果因受傷、不合格或損壞的裝備更換選手，對方隊伍也可以選擇更換一位選手。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="19.3.1" class="num">19.3.1</div>
+              <div class="text">
+                更換上場的選手將承擔所替代選手的完整狀態（位置、控盤權、讀秒計數等），並且可以代表他（她）發出宣告。
+              </div>
+            </div>
+            <h2 id="20">20 暫停</h2>
+            <div class="line" data-depth="2">
+              <div id="20.1" class="num">20.1</div>
+              <div class="text">
+                宣告暫停的選手必須用雙手或一隻手和飛盤形成“T”字，並且應向對方選手宣告“暫停【Time-out】”。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="20.2" class="num">20.2</div>
+              <div class="text">
+                在得分後、兩隊發出準備就緒信號之前，兩隊的選手都可以宣告【Time-out】；暫停延長了得分後的發盤時間七十五（75）秒。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="20.3" class="num">20.3</div>
+              <div class="text">
+                發盤後，只有擁有控盤權的控盤者可以宣告【Time-out】；暫停從“T”字形成時開始，持續七十五（75）秒，在如此的暫停之後：
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="20.3.1" class="num">20.3.1</div>
+              <div class="text">除受傷之外，不得更換選手。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="20.3.2" class="num">20.3.2</div>
+              <div class="text">比賽在軸心點的位置重新開始。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="20.3.3" class="num">20.3.3</div>
+              <div class="text">控盤者必須維持不變。</div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="20.3.4" class="num">20.3.4</div>
+              <div class="text">
+                所有其他進攻隊選手必須在任何位置建立一個固定的定位。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="20.3.5" class="num">20.3.5</div>
+              <div class="text">
+                進攻隊選手選擇了位置後，防守隊選手必須在任何位置建立一個固定的定位。
+              </div>
+            </div>
+            <div class="line" data-depth="3">
+              <div id="20.3.6" class="num">20.3.6</div>
+              <div class="text">
+                讀秒計數最多從九（9）開始，但是，如果更換守盤員，則讀秒計數從“Stalling－One（1）”開始。
+              </div>
+            </div>
+            <div class="line" data-depth="2">
+              <div id="20.4" class="num">20.4</div>
+              <div class="text">
+                比賽為活盤時，如果控盤者在隊伍沒有剩餘暫停時宣告暫停，則比賽將停止，守盤員必須依原預計開始的讀秒計數再增加兩
+                （2）秒，然後經由確認重新開始比賽；如果這宣告導致讀秒計數為
+                十（Ten）或以上，則是控盤超過規定時間未出手的盤權轉換。
+              </div>
+            </div>
+          </section>
+          <section class="definitions">
+            <h2 id="定義">定義</h2>
+            <div class="entry">
+              <div class="term">投擲行為</div>
+              <div class="definition">請參閱投擲動作。</div>
+            </div>
+            <div class="entry">
+              <div class="term">影響比賽</div>
+              <div class="definition">
+                違法行為影響比賽，如果可以合理地假設比賽結果可能因為沒有發生違法行為而顯著不同。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">進攻隊得分區</div>
+              <div class="definition">相關隊伍目前嘗試得分的得分區域。</div>
+            </div>
+            <div class="entry">
+              <div class="term">最佳視角</div>
+              <div class="definition">
+                所有選手中可得到的最完整的視點，包括關於比賽中的飛盤、地面、選手和標線、標記的相對位置。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">宣告</div>
+              <div class="definition">
+                明確傳達的聲明，主張發生了犯規、違規、違例、盤權轉換或發生受傷；可以使用以下術語：【Foul】、【Travel】、守盤員違規的特定名稱、【Violation】（或違例的特定名稱）、盤權轉換的特定名稱、【Technical】和【Injury】。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">掌握飛盤</div>
+              <div class="definition">
+                選手身體至少有二個部位夾住一片沒有旋轉的飛盤。<br /><br />如果選手一開始接盤，然後在建立控盤權之前<br />沒有持續掌握飛盤（“持續掌握飛盤”表示至少有二個部位持續控制住一片沒有旋轉的飛盤），那麼僅視為已完成一開始的接盤但後續並未掌握飛盤。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">爭奪區</div>
+              <div class="definition">
+                比賽場地內範圍，包含得分線，但不包括得分區域和外圍邊線。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">防守隊得分區</div>
+              <div class="definition">
+                相關隊伍目前正在試圖阻止對方得分的得分區。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">防守者</div>
+              <div class="definition">沒有控盤權之隊伍的任何選手。</div>
+            </div>
+            <div class="entry">
+              <div class="term">得分區</div>
+              <div class="definition">
+                比賽場地末端的兩個區域之一，隊伍可以藉由在那裡接盤得分。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">得分線</div>
+              <div class="definition">
+                將爭奪區與每個得分區分隔開來的線。它不屬於得分區的一部份。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">地面</div>
+              <div class="definition">
+                地面由所有實質性的固體物質組成，包括草、角錐、設備、水、樹木、柵欄、牆壁和非選手，但不包括所有選手及其穿的衣服、空氣中的微粒和降水。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">地面接觸</div>
+              <div class="definition">
+                指所有與特定事件或動作直接相關的選手與地面接觸，包括在失去平衡後著地或恢復（例如：跳躍、飛撲、重心不穩或落下）。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">正在防守</div>
+              <div class="definition">
+                防守者防守某一個進攻者需要在該進攻者三米之內，並且對該進攻者做出反應。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">攔截</div>
+              <div class="definition">當防守者從進攻者傳的飛盤建立控盤權。</div>
+            </div>
+            <div class="entry">
+              <div class="term">合法位置</div>
+              <div class="definition">
+                一個不違反任何規則的選手所建立的靜止或移動位置。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">線</div>
+              <div class="definition">
+                界定比賽區域的邊界，在沒有實體標線的場地中，邊界定義為兩個標記之間的虛擬線段，其寬度為上述標記，線段不會超出定義標記而外推。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">爭奪飛盤</div>
+              <div class="definition">
+                當飛盤在空中，而選手嘗試以任何方式與飛盤接觸，例如掌握或阻止飛盤；這包括跑向他（她）希望與飛盤接觸的地方之過程。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">守盤員</div>
+              <div class="definition">可以對控盤者讀秒計數的防守者。</div>
+            </div>
+            <div class="entry">
+              <div class="term">輕微接觸</div>
+              <div class="definition">
+                微小的身體力道接觸且沒有改變其他選手的動作或位置。<br />在即將或已經接觸飛盤的過程中，與對手延伸的手臂或手接觸，或投擲動作中接觸到控盤者的手，不視為是輕微接觸。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">非選手</div>
+              <div class="definition">
+                目前不是選手的所有場邊人員，包括團隊成員。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">進攻者</div>
+              <div class="definition">擁有控盤權隊伍的選手。</div>
+            </div>
+            <div class="entry">
+              <div class="term">出界</div>
+              <div class="definition">
+                所有不屬於比賽場地的部分，包括外圍邊線。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">外圍邊線</div>
+              <div class="definition">
+                將爭奪區或得分區與出界區域分隔開的線；不屬於比賽場地的一部分。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">跨步</div>
+              <div class="definition">
+                當控盤者向任何方向轉動時，維持身體的一部份與地面上一個特定的點持續接觸，稱為軸心點。<br /><br />選手透過設立身體的特定部位或保持在特定的點以建立軸心點，他（她）打算將其作為軸心點。
+                如果控盤者有多個軸心點選項，直到他（她）作出跨步之前均無法確定軸心點。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">軸心位置</div>
+              <div class="definition">
+                在比賽場地上，控盤者在盤權轉換後、發盤後、暫停後或離開爭奪區後必須建立軸心點的位置或已建立軸心點的位置。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">比賽</div>
+              <div class="definition">
+                從發盤開始後到得分前的時段；比賽可能會因宣告而中止，在這種情況下，比賽經由確認重新開始。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">選手</div>
+              <div class="definition">實際參加當前比分的人。</div>
+            </div>
+            <div class="entry">
+              <div class="term">比賽場地</div>
+              <div class="definition">
+                包括爭奪區和得分區的區域，但不包括外圍邊線。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">控盤權</div>
+              <div class="definition">
+                選手在以下情況建立控盤權：<br />－他（她）掌握一個傳盤，然後持續掌握飛盤超過一個明顯的瞬間，並且<br />－當他（她）在掌握飛盤時與所有相關的地面接觸期間仍持續掌握飛盤，或直到他（她）投擲飛盤<br /><br />選手也可以在盤權轉換、發盤或比賽中止後，以撿起落地的飛盤或收取被交付的飛盤來建立控盤權。
+                一旦選手建立了控盤權，他（她）可以改變對飛盤的持有方式，這不會影響到他（她）的控盤權，只要持續與飛盤的接觸。<br /><br />當飛盤被選手擁有控盤權或被選手掌握時，視為該選手的一部份。<br /><br />擁有控盤權或可以拿起飛盤的選手的隊伍，視為是擁有控盤權的隊伍。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">倒數計時</div>
+              <div class="definition">
+                關於恢復比賽時間限制的警告，透過二十
+                （20）、十（10）及五（5）秒（如適用）來發出警告。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">發盤</div>
+              <div class="definition">
+                從防守隊到進攻隊的投擲，代表每個半場或得分後的比賽開始；發盤不等同於一個合法的傳盤。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">接盤員</div>
+              <div class="definition">除了控盤者之外的所有進攻者。</div>
+            </div>
+            <div class="entry">
+              <div class="term">比賽中止</div>
+              <div class="definition">
+                任何因犯規、違例、討論、有爭議的宣告、受傷或暫停而停止比賽的行為，比賽必須經由確認重新開始。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">投擲</div>
+              <div class="definition">
+                任何投擲動作（包括假動作和故意掉落的飛盤）後在空中的飛盤；使得控盤者和飛盤之間失去接觸。<br /><br />傳盤相當於投擲。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">控盤者</div>
+              <div class="definition">
+                建立控盤權的進攻者，或在確定投擲結果之前，剛剛投擲出飛盤的選手。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">投擲動作</div>
+              <div class="definition">
+                投擲動作是控盤者將動能轉移到飛盤飛行的方向及產生飛盤出手的動作。跨步和準備動作均不屬於投擲動作的一部分。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">盤權轉換</div>
+              <div class="definition">
+                任何事件導致隊伍的控盤權改變。盤權轉換不視為違例。
+              </div>
+            </div>
+            <div class="entry">
+              <div class="term">飛盤停止位置</div>
+              <div class="definition">
+                指選手建立控盤權的位置或飛盤自然停止或停止滾動或滑動的位置。
+              </div>
+            </div>
+          </section>
+          <section class="license">
+            <h2 id="合法執照">合法執照</h2>
+            <p>
+              本作品（“ WFDF 飛盤爭奪賽規則2021-2024”），以及所有相關的
+              WFDF規則文檔均已獲得知識共享署名4.0許可證許可。
+              該作品的許可人和原作者是世界飛盤聯盟，這是一家在美國科羅拉多州註冊的非營利性公司。
+              這是法律法規的易於閱讀的摘要（完整的許可證可以在附錄G中找到）
+            </p>
+            <p>
+              中文版翻譯：章艾薰（Eric Chang）、Will Chen<br />如有任何問題請勿自行修改，請聯絡：eric2541@yahoo.com.tw
+            </p>
+            <ul>
+              <p>在以下條件下:</p>
+              <li>您必須以作者或許可人指定的方式引用作品。</li>
+              <li>對於任何重用或分享，您必須向其他人說明此「合法執照」。</li>
+              <li>對於任何引用或分享本規則需保留此「合法執照」。</li>
+            </ul>
+            <ul>
+              <p>您可以免費：</p>
+              <li>複製、分享、展示和執行作品,</li>
+              <li>使衍生作品</li>
+              <li>對作品進行商業利用</li>
+            </ul>
+            <p>
+              <!-- -->如果您得到WFDF及翻譯者的許可，則以上任何條件可依照許可事項調整
+            </p>
+            <p>您的合理使用和其他權利不受上述影響。<!-- --></p>
+          </section>
+        </main>
+      </div>
+  </body>
+</html>
